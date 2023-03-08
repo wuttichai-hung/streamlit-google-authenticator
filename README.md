@@ -10,3 +10,10 @@ pip install -r requirements.txt
 ```bash
 streamlit run streamlit_app.py
 ```
+
+## Run with Docker
+
+```bash
+docker build -t streamlit-gauth .
+docker run -p 8501:8501 --name="streamlit-gauth" -d streamlit-gauth
+```

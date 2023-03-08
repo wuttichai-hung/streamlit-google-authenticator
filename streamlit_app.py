@@ -21,7 +21,7 @@ st.markdown("# Google Authenticator")
 st.image(qr_byte_data, caption="QR Code - Google Authenticator")
 
 
-code = st.text_input("Enter the Code : ")
+code = st.text_input("Enter the Code", placeholder="123456")
 if st.button("Verify"):
     totp = pyotp.TOTP(st.session_state.secret)
     if totp.verify(re.sub(r"\s", "", code)):
